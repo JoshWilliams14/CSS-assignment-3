@@ -7,14 +7,17 @@ html {
 * {
     box-sizing: inherit; /* keep */
 }
+
+/* Google Font, Nice (Not Common), Mac Backup, Windows Backup, Common Backup, Generic Font */
+
 body {
-    font-family: sans-serif;
+    font-family:'Spectral', 'Book Antiqua', 'Big Caslon', 'Palatino', 'Georgia', serif;
     background: #5598b2; /* keep */
     color: #333; /* keep */
     margin: 0; /* keep */
 }
 h1, h2 {
-    font-family: serif;
+    font-family: 'Signika', 'Century Gothic', 'Geneva', 'Franklin Gothic Medium' 'Verdana', sans-serif;
 }
 #tagline {
     font-style: italic;
