@@ -8,7 +8,7 @@ html {
     box-sizing: inherit; /* keep */
 }
 
-/* Google Font, Nice (Not Common), Mac Backup, Windows Backup, Common Backup, Generic Font */
+/* FONTS: Google Font, Nice (Not Common), Mac Backup, Windows Backup, Common Backup, Generic Font */
 
 body {
     font-family:'Spectral', 'Book Antiqua', 'Big Caslon', 'Palatino', 'Georgia', serif;
@@ -17,7 +17,7 @@ body {
     margin: 0; /* keep */
 }
 h1, h2 {
-    font-family: 'Signika', 'Century Gothic', 'Geneva', 'Franklin Gothic Medium' 'Verdana', sans-serif;
+    font-family: 'Signika', 'Century Gothic', 'Geneva', 'Franklin Gothic Medium', 'Verdana', sans-serif;
 }
 #tagline {
     font-style: italic;
@@ -40,11 +40,16 @@ img {
     max-width: 1280px; /* keep */
     margin: auto; /* keep */
     display: grid; /* keep */
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(7, auto);
     grid-template-areas:
-        "header arial georgia pairing bobwhite-quail"
-        "readability line-length helvetica typeface footer";
+        "header header header header header"
+        "pairing pairing pairing arial georgia"
+        "bobwhite-quail bobwhite-quail readability readability readability"
+        "bobwhite-quail bobwhite-quail line-length line-length line-length"
+        "typeface typeface typeface helvetica helvetica"
+        "typeface typeface typeface . ."
+        "footer footer footer footer footer"
 }
 
 /* all grid items -
@@ -56,43 +61,65 @@ img {
 header {
     grid-area: header; /* keep */
     background: #fff; /* keep */
+    font-size: 180%;
+    text-align: center;
 }
 #arial {
     grid-area: arial; /* keep */
     background: #a8e8ff; /* keep */
+    padding-top: 3.5rem;
 }
 #georgia {
     grid-area: georgia; /* keep */
     background: #a8e8ff; /* keep */
+    padding: 3.5rem 1rem 1rem 1rem;
 }
 #pairing {
     grid-area: pairing; /* keep */
     background: #a8e8ff; /* keep */
+    font-size: 1.75rem;
+    padding: 3rem;
+    margin: 0;
 }
 #bobwhite-quail {
     grid-area: bobwhite-quail; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 4rem 2rem 3rem 4rem;
 }
 #readability {
     grid-area: readability; /* keep */
     background: #d2f4ff; /* keep */
+    font-size: 1.15rem;
+    padding: 2rem 4rem 0rem 0rem;
+    margin: 0;
 }
 #line-length {
     grid-area: line-length; /* keep */
     background: #d2f4ff; /* keep */
+    font-size: 1.15rem;
+    padding-right: 4rem;
+    margin: 0;
+
 }
 #helvetica {
     grid-area: helvetica; /* keep */
     background: #fff; /* keep */
+    padding: 2rem;
+    margin: 4rem 3rem 2rem 1rem;
 }
 #typeface {
     grid-area: typeface; /* keep */
     color: #d2f4ff; /* keep */
+    font-size: 1.15rem;
+    text-shadow: .2rem .2rem .3rem #666;
     background: #5598b2; /* keep */
+    padding: 2rem 1rem 3rem 4rem;
 }
 footer {
     grid-area: footer; /* keep */
     background: #b2988a; /* keep */
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 /* end of all 10 grid items */
@@ -108,3 +135,70 @@ a:hover {
 }
 
 /* media queries below - only 1 is needed */
+
+@media screen and (max-width: 600px) {
+
+  #container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas:
+      "header header"
+      "arial georgia"
+      "pairing pairing"
+      "bobwhite-quail bobwhite-quail"
+      "readability readability"
+      "line-length line-length"
+      "helvetica helvetica"
+      "typeface typeface"
+      "footer footer"
+  }
+
+  h1 {
+    padding: 1rem 3rem 0 3rem;
+
+  }
+
+  header img {
+    display: none;
+  }
+
+  #tagline {
+    padding: 0 3rem 1rem 3rem;
+  }
+
+  #arial {
+    padding: 1.5rem .5rem 0 1.5rem;
+  }
+
+  #georgia {
+    padding: 1.5rem 1.5rem 0 .5rem;
+  }
+
+  #pairing {
+    padding: 2rem 1rem;
+  }
+
+  #bobwhite-quail {
+    padding: 1rem;
+  }
+
+  #readability {
+    padding: 0 1rem;
+  }
+  #line-length {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  #helvetica {
+    margin: 0;
+  }
+
+  #typeface {
+    padding: 1rem;
+  }
+
+  footer {
+    text-align: left;
+    padding: 1rem;
+  }
+}
